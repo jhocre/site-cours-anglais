@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cours d’anglais – [Nom]</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +13,7 @@
     <div class="container">
       <h1>Cours d’anglais avec [Nom]</h1>
       <nav>
-        <a href="#about">À propos</a>
+        <a href="#about">À propos de moi</a>
         <a href="#courses">Cours & Tarifs</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -47,8 +48,8 @@
     <p>Pour toute question ou réservation :</p>
     <p><a href="mailto:contact@exemple.com" class="btn">contact@exemple.com</a></p>
     <p>
-    <a href="https://kalendi.com/nom-utilisateur" target="_blank" class="btn">Réserver un créneau en ligne</a>
-  </p>
+      <a href="https://kalendi.com/nom-utilisateur" target="_blank" class="btn">Réserver un créneau en ligne</a>
+    </p>
   </section>
 
   <footer>
@@ -56,5 +57,19 @@
       <p>&copy; 2025 Cours d’anglais [Nom] – Tous droits réservés</p>
     </div>
   </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">
+  window.onload = function() {
+    Calendly.initBadgeWidget({
+      url: 'https://calendly.com/johann-creneguy/30min',
+      text: 'Prendre rendez-vous',
+      color: '#8BC34A',       // couleur verte de ton site
+      textColor: '#ffffff',   // texte blanc
+      branding: false         // pour enlever "powered by Calendly"
+    });
+  }
+</script>
+
 </body>
 </html>

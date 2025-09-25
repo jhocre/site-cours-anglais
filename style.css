@@ -1,19 +1,15 @@
 /* style.css modifié */
 
-
 /* Corps de la page */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f0f8f5; /* fond général très clair vert-pâle */
-  /* Pour un motif de fond, placer le fichier dans assets/ et décommenter ci-dessous */
+  background-color: #f0f8f5;
   background-image: url('assets/background.webp'); 
   background-repeat: repeat;
   background-size: contain;
-
-   /* On ajoute un voile par-dessus */
   position: relative;
 }
 
@@ -24,8 +20,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255,0.8); /* voile blanc semi-transparent */
-  z-index: -1; /* derrière le contenu */
+  background-color: rgba(255,255,255,0.8);
+  z-index: -1;
 }
 
 /* Conteneur principal */
@@ -37,7 +33,7 @@ body::before {
 
 /* Bandeau */
 header {
-  background: #8BC34A; /* vert clair principal */
+  background: #8BC34A;
   color: white;
   padding: 1.5rem 0;
 }
@@ -62,23 +58,21 @@ nav a {
 
 /* Section hero */
 #hero {
-  background: #e8f5e9; /* vert très clair */
+  background: #e8f5e9;
   text-align: center;
   padding: 4rem 1rem;
-  /* Pour une image : */
-  /* background: url('assets/hero-bg.jpg') center center / cover no-repeat; */
 }
 
 #hero h2 {
   margin-top: 0;
   font-size: 2.5rem;
-  color: #558B2F; /* vert doux pour le titre */
+  color: #558B2F;
 }
 
 /* Boutons */
 .btn {
   display: inline-block;
-  background: #8BC34A; /* vert clair principal */
+  background: #8BC34A;
   color: white;
   padding: 0.8rem 1.4rem;
   margin-top: 1rem;
@@ -88,19 +82,19 @@ nav a {
 }
 
 .btn:hover {
-  background: #6FA86B; /* vert clair légèrement plus foncé au survol */
+  background: #6FA86B;
 }
 
 /* Sections générales */
 section {
-  padding: 4rem 0; /* plus d’espace vertical */
-  text-align: center; /* centre tout dans les sections */
+  padding: 4rem 0;
+  text-align: center;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #558B2F; /* vert doux pour les titres */
+  color: #558B2F;
 }
 
 /* Liste des prix */
@@ -119,7 +113,7 @@ h2 {
 footer {
   text-align: center;
   padding: 1.5rem 0;
-  background: #e0f2f1; /* fond très léger vert-bleu pâle */
+  background: #e0f2f1;
   font-size: 0.9rem;
 }
 
@@ -128,6 +122,7 @@ footer {
   #hero h2 {
     font-size: 1.8rem;
   }
+
   nav a {
     display: inline-block;
     margin: 0.5rem;
