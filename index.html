@@ -6,44 +6,34 @@
   <title>ACE Education – Expert English Tutoring</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d5df4c5a.js" crossorigin="anonymous"></script>
 </head>
-<!-- Calendly badge widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script>
-  window.addEventListener("load", function() {
-    Calendly.initBadgeWidget({
-      url: 'https://calendly.com/johann-creneguy/30min', // mets ton lien Calendly ici
-      text: 'Prendre rendez-vous',
-      color: '#8BC34A',       // couleur du bouton
-      textColor: '#ffffff',   // couleur du texte
-      branding: false         // pas de branding Calendly
-    });
-  });
-</script>
-<!-- End Calendly badge widget -->
 <body>
 
- <header>
-  <div class="logo-container">
-    <img src="assets/logo_ace.png" alt="ACE Logo">
-  </div>
-  <nav>
-    <a href="#home">Accueil</a>
-    <a href="#about">À propos</a>
-    <a href="#tutoring">Services de Tutoring</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <img src="assets/logo_ace.png" alt="ACE Education Logo" class="logo">
+      <nav>
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#why">Pourquoi nous choisir ?</a>
+        <a href="#tutoring">Services</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Scroll to top button -->
   <button id="scrollTopBtn">&#8679;</button>
 
   <!-- Home Section -->
   <section id="home" class="section section-home">
+    <div class="overlay"></div>
     <div class="container home-container">
       <h2>Unlock Your Potential in English</h2>
-      <p>At ACE Education, we help students and professionals achieve academic success through expert English tutoring.</p>
+      <p>Des cours sur mesure pour étudiants, professionnels et adultes qui souhaitent progresser rapidement en anglais.</p>
       <a href="#contact" class="btn">Réserver un cours</a>
     </div>
   </section>
@@ -52,12 +42,38 @@
   <section id="about" class="section section-about">
     <div class="container about-container">
       <div class="about-image">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0Vrj12_rZb-Jx3sarR7zy_NjvPYV-bQj7A&s" alt="Photo de [Nom]">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0Vrj12_rZb-Jx3sarR7zy_NjvPYV-bQj7A&s" alt="Photo prof">
       </div>
       <div class="about-text">
         <h2>À propos</h2>
-        <p>[Nom] est professeure d’anglais diplômée, avec plus de 10 ans d’expérience en France et au Royaume-Uni.</p>
-        <p>Elle accompagne enfants, adolescents et adultes pour améliorer leur anglais, préparer des examens et réussir à l’international.</p>
+        <p>Professeure diplômée, avec plus de 10 ans d’expérience en France et au Royaume-Uni.</p>
+        <p>J’accompagne enfants, adolescents et adultes pour améliorer leur anglais, préparer des examens et réussir à l’international.</p>
+        <blockquote>« Enseigner l’anglais, c’est ouvrir des portes sur le monde. »</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="section section-why">
+    <div class="container why-container">
+      <h2>Pourquoi nous choisir ?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="fas fa-graduation-cap"></i>
+          <p>+10 ans d’expérience</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-globe-europe"></i>
+          <p>Diplômée en France et au Royaume-Uni</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-user-check"></i>
+          <p>Suivi personnalisé</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-award"></i>
+          <p>100% réussite examens</p>
+        </div>
       </div>
     </div>
   </section>
@@ -67,31 +83,46 @@
     <div class="container tutoring-container">
       <h2>Services de Tutoring</h2>
       <div class="tabs">
-        <button class="tab-btn" data-tab="secondary">Secondary School</button>
-        <button class="tab-btn" data-tab="exam">Exam Preparation</button>
-        <button class="tab-btn" data-tab="adult">Adult Learning</button>
-        <button class="tab-btn" data-tab="cpd">Professional Training</button>
-        <button class="tab-btn" data-tab="university">University Counselling</button>
+        <button class="tab-btn active" data-tab="secondary"><i class="fas fa-book"></i> Secondary School</button>
+        <button class="tab-btn" data-tab="exam"><i class="fas fa-pencil-alt"></i> Exam Preparation</button>
+        <button class="tab-btn" data-tab="adult"><i class="fas fa-user-graduate"></i> Adult Learning</button>
+        <button class="tab-btn" data-tab="cpd"><i class="fas fa-chalkboard-teacher"></i> Professional Training</button>
+        <button class="tab-btn" data-tab="university"><i class="fas fa-university"></i> University Counselling</button>
       </div>
-      <div class="tab-content" id="secondary">
-        <h3>Secondary School Support (Collège & Lycée)</h3>
-        <p>Support personnalisé pour renforcer les compétences en lecture, écriture et analyse, avec préparation aux curricula internationaux.</p>
+      <div class="tab-content active" id="secondary">
+        <h3>Secondary School Support</h3>
+        <p>Renforcer la lecture, l’écriture et la préparation aux curricula internationaux.</p>
       </div>
       <div class="tab-content" id="exam">
         <h3>Exam Preparation</h3>
-        <p>Techniques d’écriture, analyse, traduction et gestion du temps pour réussir vos examens.</p>
+        <p>Stratégies pour réussir vos examens : écriture, analyse, traduction et gestion du temps.</p>
       </div>
       <div class="tab-content" id="adult">
         <h3>Adult Learning</h3>
-        <p>Préparation à l’agrégation, Shakespeare, traduction et accompagnement professionnel sur mesure.</p>
+        <p>Préparation concours, littérature anglaise, traduction et accompagnement professionnel.</p>
       </div>
       <div class="tab-content" id="cpd">
         <h3>Professional Training (CPD)</h3>
-        <p>Ateliers et formations pour enseignants basés sur les meilleures pratiques UK.</p>
+        <p>Ateliers et formations pour enseignants selon les standards britanniques.</p>
       </div>
       <div class="tab-content" id="university">
         <h3>University Counselling</h3>
-        <p>Accompagnement complet pour les candidatures universitaires au Royaume-Uni (UCAS, personal statement, références).</p>
+        <p>Accompagnement complet pour candidatures universitaires UK (UCAS, personal statement).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section section-testimonials">
+    <div class="container">
+      <h2>Témoignages</h2>
+      <div class="testimonial">
+        <p>« Grâce à ACE Education, ma fille a progressé en seulement 3 mois et a réussi son examen ! »</p>
+        <span>- Parent d’élève</span>
+      </div>
+      <div class="testimonial">
+        <p>« Les cours sont dynamiques et parfaitement adaptés à mon niveau professionnel. »</p>
+        <span>- Adulte apprenant</span>
       </div>
     </div>
   </section>
@@ -108,10 +139,28 @@
       </form>
     </div>
   </section>
-    <!-- Footer -->
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 ACE Education – Tous droits réservés.</p>
+    <p>© 2025 ACE Education – Tous droits réservés</p>
   </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <!-- Calendly Badge Widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">
+  window.onload = function() {
+    Calendly.initBadgeWidget({
+      url: 'https://calendly.com/johann-creneguy/30min',
+      text: 'Prendre rendez-vous',
+      color: '#8BC34A',
+      textColor: '#ffffff',
+      branding: false
+    });
+  }
+</script>
+
 </body>
 </html>
- <script src="script.js"></script>

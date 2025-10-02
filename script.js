@@ -1,52 +1,57 @@
-// --- Tutoring Services Tabs ---
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
+// === Scroll to top button ===
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-function showTab(tabId) {
-  tabContents.forEach(content => content.classList.remove('active'));
-  tabBtns.forEach(btn => btn.classList.remove('active'));
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
 
-  const targetContent = document.getElementById(tabId);
-  const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
-
-  if (targetContent) targetContent.classList.add('active');
-  if (targetBtn) targetBtn.classList.add('active');
-}
-
-// Affiche le premier onglet par défaut
-if(tabBtns.length > 0) showTab(tabBtns[0].dataset.tab);
-
-// Ajout des événements click
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    showTab(btn.dataset.tab);
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
 });
 
-// --- Scroll to top button ---
-const scrollBtn = document.getElementById("scrollTopBtn");
+// === Tabs logic ===
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-};
+tabButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Retire "active" de tous
+    tabButtons.forEach(btn => btn.classList.remove("active"));
+    tabContents.forEach(content => {
+      content.classList.remove("active", "fade-in");
+    });
 
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Ajoute "active" au bouton cliqué
+    button.classList.add("active");
+
+    // Affiche le contenu associé
+    const tabId = button.dataset.tab;
+    const targetContent = document.getElementById(tabId);
+    targetContent.classList.add("active");
+
+    // Animation d'apparition
+    setTimeout(() => {
+      targetContent.classList.add("fade-in");
+    }, 50);
+  });
 });
 
-// --- Calendly Badge ---
-window.onload = function() {
-  if(typeof Calendly !== 'undefined') {
-    Calendly.initBadgeWidget({
-      url: 'https://calendly.com/johann-creneguy/30min',
-      text: 'Prendre rendez-vous',
-      color: '#8BC34A',
-      textColor: '#ffffff',
-      branding: false
-    });
+// === Petite animation fade-in CSS ===
+const style = document.createElement("style");
+style.innerHTML = `
+  .tab-content {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
   }
-};
+  .tab-content.active.fade-in {
+    opacity: 1;
+  }
+`;
+document.head.appendChild(style);
