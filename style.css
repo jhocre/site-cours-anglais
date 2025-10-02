@@ -163,3 +163,11 @@ nav a:hover {
   display: block;
   width: 50%;
 }
+footer {
+  background: #d5e5ce;
+  color: #333;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
