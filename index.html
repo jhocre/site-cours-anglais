@@ -3,73 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cours d’anglais – [Nom]</title>
+  <title>ACE Education – Expert English Tutoring</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<!-- Calendly badge widget -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script>
+  window.addEventListener("load", function() {
+    Calendly.initBadgeWidget({
+      url: 'https://calendly.com/johann-creneguy/30min', // mets ton lien Calendly ici
+      text: 'Prendre rendez-vous',
+      color: '#8BC34A',       // couleur du bouton
+      textColor: '#ffffff',   // couleur du texte
+      branding: false         // pas de branding Calendly
+    });
+  });
+</script>
+<!-- End Calendly badge widget -->
 <body>
-  <header>
-    <div class="container">
-      <h1>Cours d’anglais avec [Nom]</h1>
-      <nav>
-        <a href="#about">À propos de moi</a>
-        <a href="#courses">Cours & Tarifs</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+ <header>
+  <div class="logo-container">
+    <img src="assets/logo_ace.png" alt="ACE Logo">
+  </div>
+  <nav>
+    <a href="#home">Accueil</a>
+    <a href="#about">À propos</a>
+    <a href="#tutoring">Services de Tutoring</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+  <!-- Scroll to top button -->
+  <button id="scrollTopBtn">&#8679;</button>
+
+  <!-- Home Section -->
+  <section id="home" class="section section-home">
+    <div class="container home-container">
+      <h2>Unlock Your Potential in English</h2>
+      <p>At ACE Education, we help students and professionals achieve academic success through expert English tutoring.</p>
+      <a href="#contact" class="btn">Réserver un cours</a>
     </div>
-  </header>
+  </section>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Améliorez votre anglais avec un accompagnement personnalisé</h2>
-      <p>Des cours adaptés à tous les niveaux, en ligne ou en présentiel.</p>
-      <a class="btn" href="#contact">Réserver un cours</a>
+  <!-- About Section -->
+  <section id="about" class="section section-about">
+    <div class="container about-container">
+      <div class="about-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0Vrj12_rZb-Jx3sarR7zy_NjvPYV-bQj7A&s" alt="Photo de [Nom]">
+      </div>
+      <div class="about-text">
+        <h2>À propos</h2>
+        <p>[Nom] est professeure d’anglais diplômée, avec plus de 10 ans d’expérience en France et au Royaume-Uni.</p>
+        <p>Elle accompagne enfants, adolescents et adultes pour améliorer leur anglais, préparer des examens et réussir à l’international.</p>
+      </div>
     </div>
   </section>
 
-  <section id="about" class="container">
-    <h2>À propos</h2>
-    <p>[Nom] est professeure d’anglais diplômée, avec X années d’expérience dans l’enseignement et la formation.</p>
-    <p>Elle accompagne enfants, ados et adultes dans l’amélioration de leur anglais (conversation, préparation d’examens, vocabulaire professionnel…).</p>
+  <!-- Tutoring Services Section -->
+  <section id="tutoring" class="section section-tutoring">
+    <div class="container tutoring-container">
+      <h2>Services de Tutoring</h2>
+      <div class="tabs">
+        <button class="tab-btn" data-tab="secondary">Secondary School</button>
+        <button class="tab-btn" data-tab="exam">Exam Preparation</button>
+        <button class="tab-btn" data-tab="adult">Adult Learning</button>
+        <button class="tab-btn" data-tab="cpd">Professional Training</button>
+        <button class="tab-btn" data-tab="university">University Counselling</button>
+      </div>
+      <div class="tab-content" id="secondary">
+        <h3>Secondary School Support (Collège & Lycée)</h3>
+        <p>Support personnalisé pour renforcer les compétences en lecture, écriture et analyse, avec préparation aux curricula internationaux.</p>
+      </div>
+      <div class="tab-content" id="exam">
+        <h3>Exam Preparation</h3>
+        <p>Techniques d’écriture, analyse, traduction et gestion du temps pour réussir vos examens.</p>
+      </div>
+      <div class="tab-content" id="adult">
+        <h3>Adult Learning</h3>
+        <p>Préparation à l’agrégation, Shakespeare, traduction et accompagnement professionnel sur mesure.</p>
+      </div>
+      <div class="tab-content" id="cpd">
+        <h3>Professional Training (CPD)</h3>
+        <p>Ateliers et formations pour enseignants basés sur les meilleures pratiques UK.</p>
+      </div>
+      <div class="tab-content" id="university">
+        <h3>University Counselling</h3>
+        <p>Accompagnement complet pour les candidatures universitaires au Royaume-Uni (UCAS, personal statement, références).</p>
+      </div>
+    </div>
   </section>
 
-  <section id="courses" class="container">
-    <h2>Cours & Tarifs</h2>
-    <ul class="pricing">
-      <li><strong>Individuel (1h) :</strong> 25 €</li>
-      <li><strong>Pack 10h :</strong> 220 €</li>
-      <li><strong>Préparation TOEIC / examens</strong></li>
-    </ul>
+  <!-- Contact Section -->
+  <section id="contact" class="section section-contact">
+    <div class="container contact-container">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
   </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Pour toute question ou réservation :</p>
-    <p><a href="mailto:contact@exemple.com" class="btn">contact@exemple.com</a></p>
-    <p>
-      <a href="https://kalendi.com/nom-utilisateur" target="_blank" class="btn">Réserver un créneau en ligne</a>
-    </p>
-  </section>
-
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Cours d’anglais [Nom] – Tous droits réservés</p>
-    </div>
+    <p>&copy; 2024 ACE Education. Tous droits réservés.</p>
   </footer>
 
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">
-  window.onload = function() {
-    Calendly.initBadgeWidget({
-      url: 'https://calendly.com/johann-creneguy/30min',
-      text: 'Prendre rendez-vous',
-      color: '#8BC34A',       // couleur verte de ton site
-      textColor: '#ffffff',   // texte blanc
-      branding: false         // pour enlever "powered by Calendly"
-    });
-  }
-</script>
+ <script src="script.js"></script>
 
 </body>
 </html>
