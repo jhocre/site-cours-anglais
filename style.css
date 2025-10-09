@@ -248,3 +248,103 @@ footer {
   font-size: 0.9rem;
 }
 
+/* === Language selector : drapeau propre + hover-open === */
+.language-selector {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  z-index: 2000;
+  font-family: inherit;
+}
+
+/* bouton drapeau (carré arrondi, petite ombre) */
+#lang-btn {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+#lang-btn:hover,
+.language-selector.open #lang-btn {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+}
+
+/* le drapeau actuel */
+#current-flag {
+  display: block;
+  width: 28px;        /* taille visible, nette */
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px; /* léger arrondi */
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+#lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+  min-width: 160px;
+  padding: 6px 0;
+  transition: opacity .12s ease, transform .12s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3000; /* assure qu'il reste au-dessus */
+}
+
+/* --- Correction hover desktop qui disparaît --- */
+
+/* Le menu doit rester ouvert tant qu'on survole soit le bouton, soit le dropdown */
+.language-selector:hover #lang-dropdown,
+.language-selector:focus-within #lang-dropdown,
+.language-selector.open #lang-dropdown {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* item */
+#lang-dropdown .lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #222;
+  font-size: 0.95rem;
+  transition: background .12s ease;
+}
+#lang-dropdown .lang-option:hover {
+  background: #f5f6f7;
+}
+
+/* small flag inside dropdown */
+#lang-dropdown .lang-option img {
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Responsive : si l'écran est petit, décaler à gauche un peu */
+@media (max-width: 480px) {
+  .language-selector { right: 10px; top: 8px; }
+  #lang-btn { width: 40px; height: 40px; }
+  #current-flag { width: 24px; height: 17px; }
+  #lang-dropdown { min-width: 140px; }
+}

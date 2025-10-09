@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACE Education – Expert English Tutoring</title>
+  <title>ACE Education – Tutorat Expert en Anglais</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2d5df4c5a.js" crossorigin="anonymous"></script>
@@ -15,13 +15,37 @@
     <div class="container header-container">
       <img src="assets/logo_ace.png" alt="ACE Education Logo" class="logo">
       <nav>
-        <a href="#home">Accueil</a>
-        <a href="#about">À propos</a>
-        <a href="#why">Pourquoi nous choisir ?</a>
-        <a href="#tutoring">Services</a>
-        <a href="#testimonials">Témoignages</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-translate="nav_home">Accueil</a>
+        <a href="#about" data-translate="nav_about">À propos</a>
+        <a href="#why" data-translate="nav_why">Pourquoi nous choisir ?</a>
+        <a href="#tutoring" data-translate="nav_services">Services</a>
+        <a href="#testimonials" data-translate="nav_testimonials">Témoignages</a>
+        <a href="#contact" data-translate="nav_contact">Contact</a>
       </nav>
+    </div>
+
+    <!-- Language selector -->
+    <div class="language-selector" id="language-selector">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" title="Sélection de la langue">
+        <img id="current-flag" src="https://flagcdn.com/fr.svg" alt="FR">
+      </button>
+      <div id="lang-dropdown" role="menu" aria-hidden="true">
+        <div class="lang-option" data-lang="fr" role="menuitem">
+          <img src="https://flagcdn.com/fr.svg" alt="FR"> Français
+        </div>
+        <div class="lang-option" data-lang="en" role="menuitem">
+          <img src="https://flagcdn.com/gb.svg" alt="EN"> English
+        </div>
+        <div class="lang-option" data-lang="de" role="menuitem">
+          <img src="https://flagcdn.com/de.svg" alt="DE"> Deutsch
+        </div>
+        <div class="lang-option" data-lang="es" role="menuitem">
+          <img src="https://flagcdn.com/es.svg" alt="ES"> Español
+        </div>
+        <div class="lang-option" data-lang="it" role="menuitem">
+          <img src="https://flagcdn.com/it.svg" alt="IT"> Italiano
+        </div>
+      </div>
     </div>
   </header>
 
@@ -32,9 +56,9 @@
   <section id="home" class="section section-home">
     <div class="overlay"></div>
     <div class="container home-container">
-      <h2>Unlock Your Potential in English</h2>
-      <p>Des cours sur mesure pour étudiants, professionnels et adultes qui souhaitent progresser rapidement en anglais.</p>
-      <a href="#contact" class="btn">Réserver un cours</a>
+      <h2 data-translate="home_title">ACE Education – Tutorat expert en anglais pour réussir à l’école, aux examens et au-delà</h2>
+      <p data-translate="home_text">Chez ACE Education, nous aidons élèves et professionnels à atteindre la réussite scolaire et à saisir des opportunités internationales grâce à un accompagnement expert en anglais. Avec plus de 10 ans d’expérience en France et au Royaume-Uni, nous proposons des cours personnalisés en ligne qui renforcent la confiance, améliorent les performances et ouvrent des portes vers les études et carrières futures.</p>
+      <a href="#contact" class="btn" data-translate="book_button">Réserver un cours</a>
     </div>
   </section>
 
@@ -45,10 +69,14 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo0Vrj12_rZb-Jx3sarR7zy_NjvPYV-bQj7A&s" alt="Photo prof">
       </div>
       <div class="about-text">
-        <h2>À propos</h2>
-        <p>Professeure diplômée, avec plus de 10 ans d’expérience en France et au Royaume-Uni.</p>
-        <p>J’accompagne enfants, adolescents et adultes pour améliorer leur anglais, préparer des examens et réussir à l’international.</p>
-        <blockquote>« Enseigner l’anglais, c’est ouvrir des portes sur le monde. »</blockquote>
+        <h2 data-translate="about_title">À propos</h2>
+        <p data-translate="about_text1">Chez ACE Education, nous croyons qu’une solide maîtrise de l’anglais ouvre des opportunités. Notre mission est de soutenir les apprenants à chaque étape — du collège et lycée aux candidatures universitaires et aux professionnels adultes. Nous apportons :</p>
+        <ul data-translate="about_list">
+          <li>Expertise de niveau natif en langue et littérature anglaises</li>
+          <li>Connaissance approfondie des examens, curricula et parcours universitaires britanniques</li>
+          <li>Expérience internationale, aidant les élèves à réussir dans les systèmes britannique et français</li>
+        </ul>
+        <p data-translate="about_text3">Que vous prépariez l’iGCSE, le BFI, l’agrégation ou une candidature universitaire au Royaume-Uni, ACE Education offre un soutien personnalisé conçu pour vous faire progresser.</p>
       </div>
     </div>
   </section>
@@ -56,7 +84,7 @@
   <!-- Why Choose Us -->
   <section id="why" class="section section-why">
     <div class="container why-container">
-      <h2>Pourquoi nous choisir ?</h2>
+      <h2 data-translate="why_title">Pourquoi nous choisir ?</h2>
       <div class="why-grid">
         <div class="why-card">
           <i class="fas fa-graduation-cap"></i>
@@ -81,33 +109,57 @@
   <!-- Tutoring Services Section -->
   <section id="tutoring" class="section section-tutoring">
     <div class="container tutoring-container">
-      <h2>Services de Tutoring</h2>
+      <h2 data-translate="tutoring_title">Services de Tutoring</h2>
       <div class="tabs">
-        <button class="tab-btn active" data-tab="secondary"><i class="fas fa-book"></i> Secondary School</button>
-        <button class="tab-btn" data-tab="exam"><i class="fas fa-pencil-alt"></i> Exam Preparation</button>
-        <button class="tab-btn" data-tab="adult"><i class="fas fa-user-graduate"></i> Adult Learning</button>
-        <button class="tab-btn" data-tab="cpd"><i class="fas fa-chalkboard-teacher"></i> Professional Training</button>
-        <button class="tab-btn" data-tab="university"><i class="fas fa-university"></i> University Counselling</button>
+        <button class="tab-btn active" data-tab="secondary"><i class="fas fa-book"></i> Collège & Lycée</button>
+        <button class="tab-btn" data-tab="exam"><i class="fas fa-pencil-alt"></i> Préparation aux examens</button>
+        <button class="tab-btn" data-tab="adult"><i class="fas fa-user-graduate"></i> Adultes</button>
+        <button class="tab-btn" data-tab="cpd"><i class="fas fa-chalkboard-teacher"></i> Formation professionnelle (CPD)</button>
+        <button class="tab-btn" data-tab="university"><i class="fas fa-university"></i> Orientation universitaire</button>
       </div>
-      <div class="tab-content active" id="secondary">
-        <h3>Secondary School Support</h3>
-        <p>Renforcer la lecture, l’écriture et la préparation aux curricula internationaux.</p>
+      <div class="tab-content active" id="secondary" data-translate="secondary_content">
+        <h3>Collège & Lycée</h3>
+        <p>Renforcement des compétences en anglais et soutien académique pour curricula français et internationaux. </p>
+        <ul>
+          <li>Soutien en langue et littérature anglaises – analyse, rédaction et pensée critique</li>
+          <li>BFI – préparation académique et accompagnement spécialisé</li>
+          <li>iGCSE – préparation aux examens avec stratégies et retours personnalisés</li>
+        </ul>
       </div>
-      <div class="tab-content" id="exam">
-        <h3>Exam Preparation</h3>
-        <p>Stratégies pour réussir vos examens : écriture, analyse, traduction et gestion du temps.</p>
+      <div class="tab-content" id="exam" data-translate="exam_content">
+        <h3>Préparation aux examens</h3>
+        <ul>
+          <li>Planification et structuration des essais</li>
+          <li>Analyse et lecture approfondie</li>
+          <li>Techniques de traduction</li>
+          <li>Gestion du temps en conditions d’examen</li>
+        </ul>
       </div>
-      <div class="tab-content" id="adult">
-        <h3>Adult Learning</h3>
-        <p>Préparation concours, littérature anglaise, traduction et accompagnement professionnel.</p>
+      <div class="tab-content" id="adult" data-translate="adult_content">
+        <h3>Adultes</h3>
+        <ul>
+          <li>Préparation à l’agrégation : poésie, Shakespeare, traduction, littérature comparée</li>
+          <li>Compétences professionnelles en anglais adaptées à vos besoins</li>
+        </ul>
       </div>
-      <div class="tab-content" id="cpd">
-        <h3>Professional Training (CPD)</h3>
-        <p>Ateliers et formations pour enseignants selon les standards britanniques.</p>
+      <div class="tab-content" id="cpd" data-translate="cpd_content">
+        <h3>Formation professionnelle (CPD)</h3>
+        <ul>
+          <li>Compréhension du curriculum par les élèves</li>
+          <li>Techniques d’explication claire</li>
+          <li>Qualité du feedback</li>
+          <li>Différenciation et accompagnement de tous les élèves</li>
+          <li>Engagement actif et motivation</li>
+        </ul>
       </div>
-      <div class="tab-content" id="university">
-        <h3>University Counselling</h3>
-        <p>Accompagnement complet pour candidatures universitaires UK (UCAS, personal statement).</p>
+      <div class="tab-content" id="university" data-translate="university_content">
+        <h3>Orientation universitaire</h3>
+        <ul>
+          <li>Soutien pour candidatures UCAS</li>
+          <li>Ateliers sur le personal statement</li>
+          <li>Traduction de références</li>
+          <li>Conseils sur le choix des matières et universités</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -130,37 +182,25 @@
   <!-- Contact Section -->
   <section id="contact" class="section section-contact">
     <div class="container contact-container">
-      <h2>Contact</h2>
+      <h2 data-translate="contact_title">Contact</h2>
+      <p data-translate="contact_text">Pour réserver une consultation gratuite ou obtenir plus d’informations :</p>
       <form>
         <input type="text" placeholder="Nom" required>
         <input type="email" placeholder="Email" required>
         <textarea placeholder="Message" required></textarea>
-        <button type="submit" class="btn">Envoyer</button>
+        <button type="submit" class="btn" data-translate="send_button">Envoyer</button>
       </form>
+      <p>Email : <a href="mailto:anna.creneguy@ace-education.fr">anna.creneguy@ace-education.fr</a> | Téléphone : +33 6 95 64 65 57</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 ACE Education – Tous droits réservés</p>
+    <p>ACE Education – SIREN 990768392 | 7Bis rue de Presbytère, Noyal Muzillac, 56190, France</p>
+    <p>Site hébergé par [Hosting Company] | © 2025 ACE Education. Tous droits réservés.</p>
+    <p><a href="#privacy">Politique de confidentialité</a> | <a href="#tos">Conditions générales</a></p>
   </footer>
 
-  <!-- Script -->
   <script src="script.js"></script>
-  <!-- Calendly Badge Widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">
-  window.onload = function() {
-    Calendly.initBadgeWidget({
-      url: 'https://calendly.com/johann-creneguy/30min',
-      text: 'Prendre rendez-vous',
-      color: '#8BC34A',
-      textColor: '#ffffff',
-      branding: false
-    });
-  }
-</script>
-
 </body>
 </html>
