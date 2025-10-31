@@ -27,30 +27,10 @@ header {
 /* Logo centré et responsive */
 header img {
   display: block;
-  margin: 0 auto;       
-  width: 30%;           
-  max-width: 250px;     
-  height: auto;         
-}
-
-/* Ajustement pour les petits écrans */
-@media (max-width: 600px) {
-  header img {
-    width: 50%;         
-    max-width: 180px;   
-  }
-}
-
-/* Logo */
-.logo-container {
+  margin: 0 auto;
   width: 30%;
   max-width: 250px;
-}
-.logo-container img {
-  width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 /* Navigation */
@@ -68,11 +48,12 @@ nav a:hover {
   color: #3b5a1f;
 }
 
+/* Scroll to top button */
 #scrollTopBtn {
   position: fixed;
   right: 20px;
   bottom: 80px;
-  background: #558B2F; /* vert */
+  background: #558B2F;
   color: #fff;
   border: none;
   width: 50px;
@@ -82,11 +63,10 @@ nav a:hover {
   display: none;
   z-index: 1000;
   font-size: 24px;
-  line-height: 50px; /* pour centrer verticalement la flèche */
+  line-height: 50px;
   text-align: center;
   padding: 0;
 }
-
 #scrollTopBtn:hover {
   background: #3b5a1f;
 }
@@ -96,7 +76,9 @@ nav a:hover {
   padding: 80px 20px;
   text-align: center;
 }
-.section-home { 
+
+/* Home Section */
+.section-home {
   position: relative;
   background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
   color: #fff;
@@ -113,8 +95,6 @@ nav a:hover {
   position: relative;
   z-index: 1;
 }
-
-/* Home Section */
 .home-container h2 { 
   font-size: 2.5rem; 
   color: #ffffff !important; /* titre blanc pour lisibilité */
@@ -139,7 +119,9 @@ nav a:hover {
 
 /* Why Choose Us */
 .section-why {
-  background: #f0f8f5;
+  background-color: #f5f9f6; /* vert très clair pour démarquer */
+  padding: 60px 20px;
+  border-radius: 8px;
 }
 .why-grid {
   display: grid;
@@ -151,12 +133,17 @@ nav a:hover {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: none; /* plus d'ombre */
 }
 .why-card i {
   font-size: 2rem;
   color: #8BC34A;
   margin-bottom: 10px;
+}
+@media (min-width: 769px) {
+  .section-why {
+box-shadow: none; /* plus d'ombre */  
+}
 }
 
 /* Testimonials */
@@ -249,7 +236,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === Language selector === */
+/* Language selector */
 .language-selector {
   position: absolute;
   top: 12px;
@@ -325,11 +312,13 @@ footer {
   border-radius: 2px;
   border: 1px solid rgba(0,0,0,0.06);
 }
+
 #form-status {
   margin-top: 1rem;
   font-weight: 600;
   text-align: center;
 }
+
 input, textarea {
   width: 100%;
   margin-bottom: 1rem;
@@ -339,7 +328,7 @@ input, textarea {
   font-family: inherit;
 }
 
-/* Bouton du formulaire cohérent avec la charte du site */
+/* Bouton du formulaire */
 button.btn {
   background-color: #8BC34A;
   color: white;
@@ -350,16 +339,13 @@ button.btn {
   transition: background-color 0.3s;
   font-weight: 600;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-
 }
-
 button.btn:hover {
   background-color: #558B2F;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-
 }
 
-/* Masquer la section Home sur mobile et ajustements du menu */
+/* === Mobile adjustments === */
 @media screen and (max-width: 768px) {
   .section-home { display: none; }
 
@@ -371,21 +357,23 @@ button.btn:hover {
     height: 100vh;
   }
 
-  /* Menu vertical centré */
   header nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
   }
-
   header nav a {
     font-size: 18px;
     padding: 10px 0;
   }
-
-  /* Cacher le lien Accueil */
   header nav a[data-translate="nav_home"] { display: none; }
+
+  /* Logo mobile agrandi */
+  header img {
+    width: 55%; /* prend 30% de l’écran */
+    max-width: none; /* pas de limite max */
+  }
 
   /* Ajustement boutons services */
   .tab-btn {
@@ -399,7 +387,7 @@ button.btn:hover {
   }
 }
 
-/* Responsive : petits écrans */
+/* Very small screens */
 @media (max-width: 480px) {
   .language-selector { right: 10px; top: 8px; }
   #lang-btn { width: 40px; height: 40px; }
