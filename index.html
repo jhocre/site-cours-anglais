@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-translate="page_title">ACE Education – Tutorat Expert en Anglais</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2d5df4c5a.js" crossorigin="anonymous"></script>
@@ -50,7 +56,7 @@
   </header>
 
   <!-- Scroll to top button -->
-  <button id="scrollTopBtn" title="Retour en haut">⬆️</button>
+<button id="scrollTopBtn">&#8679;</button> <!-- flèche vers le haut -->
 
   <!-- Home Section -->
   <section id="home" class="section section-home">
@@ -113,108 +119,82 @@
   </section>
 
   <!-- Tutoring Services Section -->
-<section id="tutoring" class="section section-tutoring">
-  <div class="container tutoring-container">
-    <h2 data-translate="tutoring_title">Services de Tutoring</h2>
+  <section id="tutoring" class="section section-tutoring">
+    <div class="container tutoring-container">
+      <h2 data-translate="tutoring_title">Services de Tutoring</h2>
 
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="secondary" data-translate="tab_secondary">
-        <i class="fas fa-book"></i> Collège & Lycée
-      </button>
-      <button class="tab-btn" data-tab="exam" data-translate="tab_exam">
-        <i class="fas fa-pencil-alt"></i> Préparation aux examens
-      </button>
-      <button class="tab-btn" data-tab="adult" data-translate="tab_adult">
-        <i class="fas fa-user-graduate"></i> Adultes
-      </button>
-      <button class="tab-btn" data-tab="cpd" data-translate="tab_cpd">
-        <i class="fas fa-chalkboard-teacher"></i> Formation professionnelle (CPD)
-      </button>
-      <button class="tab-btn" data-tab="university" data-translate="tab_university">
-        <i class="fas fa-university"></i> Orientation universitaire
-      </button>
+      <div class="tabs">
+        <button class="tab-btn" data-tab="secondary" data-translate="tab_secondary">
+          <i class="fas fa-book"></i> Collège & Lycée
+        </button>
+        <button class="tab-btn" data-tab="exam" data-translate="tab_exam">
+          <i class="fas fa-pencil-alt"></i> Préparation aux examens
+        </button>
+        <button class="tab-btn" data-tab="adult" data-translate="tab_adult">
+          <i class="fas fa-user-graduate"></i> Adultes
+        </button>
+        <button class="tab-btn" data-tab="cpd" data-translate="tab_cpd">
+          <i class="fas fa-chalkboard-teacher"></i> Formation professionnelle (CPD)
+        </button>
+        <button class="tab-btn" data-tab="university" data-translate="tab_university">
+          <i class="fas fa-university"></i> Orientation universitaire
+        </button>
+      </div>
+
+      <div class="tab-content" id="secondary">
+        <h3 data-translate="secondary_title">Collège & Lycée</h3>
+        <p data-translate="secondary_text">Renforcement des compétences en anglais et soutien académique pour curricula français et internationaux.</p>
+        <ul>
+          <li data-translate="secondary_item1">Soutien en langue et littérature anglaises – analyse, rédaction et pensée critique</li>
+          <li data-translate="secondary_item2">BFI – préparation académique et accompagnement spécialisé</li>
+          <li data-translate="secondary_item3">iGCSE – préparation aux examens avec stratégies et retours personnalisés</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="exam">
+        <h3 data-translate="exam_title">Préparation aux examens</h3>
+        <p data-translate="exam_text">Accompagnement spécifique pour réussir les examens anglais et internationaux, avec méthodes et conseils personnalisés.</p>
+        <ul>
+          <li data-translate="exam_item1">Planification et structuration des essais</li>
+          <li data-translate="exam_item2">Analyse et lecture approfondie</li>
+          <li data-translate="exam_item3">Techniques de traduction</li>
+          <li data-translate="exam_item4">Gestion du temps en conditions d’examen</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="adult">
+        <h3 data-translate="adult_title">Adultes</h3>
+        <p data-translate="adult_text">Programmes adaptés aux besoins professionnels et académiques des adultes.</p>
+        <ul>
+          <li data-translate="adult_item1">Préparation à l’agrégation : poésie, Shakespeare, traduction, littérature comparée</li>
+          <li data-translate="adult_item2">Compétences professionnelles en anglais adaptées à vos besoins</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="cpd">
+        <h3 data-translate="cpd_title">Formation professionnelle (CPD)</h3>
+        <p data-translate="cpd_text">Développement professionnel pour enseignants et formateurs, avec suivi personnalisé.</p>
+        <ul>
+          <li data-translate="cpd_item1">Compréhension du curriculum par les élèves</li>
+          <li data-translate="cpd_item2">Techniques d’explication claire</li>
+          <li data-translate="cpd_item3">Qualité du feedback</li>
+          <li data-translate="cpd_item4">Différenciation et accompagnement de tous les élèves</li>
+          <li data-translate="cpd_item5">Engagement actif et motivation</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="university">
+        <h3 data-translate="university_title">Orientation universitaire</h3>
+        <p data-translate="university_text">Accompagnement des étudiants dans leurs candidatures universitaires et choix de parcours.</p>
+        <ul>
+          <li data-translate="university_item1">Soutien pour candidatures UCAS</li>
+          <li data-translate="university_item2">Ateliers sur le personal statement</li>
+          <li data-translate="university_item3">Traduction de références</li>
+          <li data-translate="university_item4">Conseils sur le choix des matières et universités</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Collège & Lycée -->
-    <div class="tab-content active" id="secondary">
-      <h3 data-translate="secondary_title">Collège & Lycée</h3>
-      <p data-translate="secondary_text">
-        Renforcement des compétences en anglais et soutien académique pour curricula français et internationaux.
-      </p>
-      <ul>
-        <li data-translate="secondary_item1">
-          Soutien en langue et littérature anglaises – analyse, rédaction et pensée critique
-        </li>
-        <li data-translate="secondary_item2">
-          BFI – préparation académique et accompagnement spécialisé
-        </li>
-        <li data-translate="secondary_item3">
-          iGCSE – préparation aux examens avec stratégies et retours personnalisés
-        </li>
-      </ul>
-    </div>
-
-    <!-- Préparation aux examens -->
-    <div class="tab-content" id="exam">
-      <h3 data-translate="exam_title">Préparation aux examens</h3>
-      <p data-translate="exam_text">
-        Accompagnement spécifique pour réussir les examens anglais et internationaux, avec méthodes et conseils personnalisés.
-      </p>
-      <ul>
-        <li data-translate="exam_item1">Planification et structuration des essais</li>
-        <li data-translate="exam_item2">Analyse et lecture approfondie</li>
-        <li data-translate="exam_item3">Techniques de traduction</li>
-        <li data-translate="exam_item4">Gestion du temps en conditions d’examen</li>
-      </ul>
-    </div>
-
-    <!-- Adultes -->
-    <div class="tab-content" id="adult">
-      <h3 data-translate="adult_title">Adultes</h3>
-      <p data-translate="adult_text">
-        Programmes adaptés aux besoins professionnels et académiques des adultes.
-      </p>
-      <ul>
-        <li data-translate="adult_item1">
-          Préparation à l’agrégation : poésie, Shakespeare, traduction, littérature comparée
-        </li>
-        <li data-translate="adult_item2">
-          Compétences professionnelles en anglais adaptées à vos besoins
-        </li>
-      </ul>
-    </div>
-
-    <!-- Formation professionnelle (CPD) -->
-    <div class="tab-content" id="cpd">
-      <h3 data-translate="cpd_title">Formation professionnelle (CPD)</h3>
-      <p data-translate="cpd_text">
-        Développement professionnel pour enseignants et formateurs, avec suivi personnalisé.
-      </p>
-      <ul>
-        <li data-translate="cpd_item1">Compréhension du curriculum par les élèves</li>
-        <li data-translate="cpd_item2">Techniques d’explication claire</li>
-        <li data-translate="cpd_item3">Qualité du feedback</li>
-        <li data-translate="cpd_item4">Différenciation et accompagnement de tous les élèves</li>
-        <li data-translate="cpd_item5">Engagement actif et motivation</li>
-      </ul>
-    </div>
-
-    <!-- Orientation universitaire -->
-    <div class="tab-content" id="university">
-      <h3 data-translate="university_title">Orientation universitaire</h3>
-      <p data-translate="university_text">
-        Accompagnement des étudiants dans leurs candidatures universitaires et choix de parcours.
-      </p>
-      <ul>
-        <li data-translate="university_item1">Soutien pour candidatures UCAS</li>
-        <li data-translate="university_item2">Ateliers sur le personal statement</li>
-        <li data-translate="university_item3">Traduction de références</li>
-        <li data-translate="university_item4">Conseils sur le choix des matières et universités</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Testimonials -->
   <section id="testimonials" class="section section-testimonials">
@@ -235,9 +215,7 @@
   <section id="contact" class="section section-contact">
     <div class="container contact-container">
       <h2 data-translate="contact_title">Contact</h2>
-      <p data-translate="contact_text">
-        Pour réserver une consultation gratuite ou obtenir plus d’informations :
-      </p>
+      <p data-translate="contact_text">Pour réserver une consultation gratuite ou obtenir plus d’informations :</p>
 
       <form id="contact-form" action="https://formspree.io/f/xblpkqeo" method="POST">
         <input type="text" name="_gotcha" style="display:none">
@@ -253,13 +231,12 @@
 
   <!-- Footer -->
   <footer>
-    <p data-translate="footer_line1">ACE Education – SIREN 990768392 | 7Bis rue de Presbytère, Noyal Muzillac, 56190, France</p>
-    <p data-translate="footer_line2">Site hébergé par GitHub Pages | © 2025 ACE Education. Tous droits réservés.</p>
-    <p>
-      <a href="#privacy" data-translate="footer_privacy">Politique de confidentialité</a> | 
-      <a href="#tos" data-translate="footer_tos">Conditions générales</a>
-    </p>
-  </footer>
+  <p>ACE Education – SIREN 990768392</p>
+  <p>Site hébergé par GitHub Pages | © 2025 ACE Education. Tous droits réservés.</p>
+  <p>
+    <a href="privacy.html" data-translate="footer_privacy">Politique de confidentialité</a>
+  </p>
+</footer>
 
   <script src="translation.js"></script>
   <script src="script.js"></script>
